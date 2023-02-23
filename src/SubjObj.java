@@ -66,6 +66,40 @@ public class SubjObj {
 
     // function for ObjOnly
     public static void countAndWrite(ObjOnly[] arr) {
+
+        /*  ---     assigning random boolean to R
+        *           assigning respective attrib
+        *           counting a and b simultaneously
+        *   ---     */
+        int a = 0, b = 0;
+        for (ObjOnly x :
+                arr) {
+
+            x.setR(rn.nextBoolean());
+
+            if ((x.isR())) {
+                x.setAttrib('a');
+                a++;
+            } else {
+                x.setAttrib('b');
+                b++;
+            }
+        }
+
+        // writing csv file
+        try (FileWriter fw = new FileWriter("files/" + arr.length + "_ObjOnly.csv")) {
+
+            fw.write(
+                    "Selection, Counts, Percentege\n" +
+                            "Positive," + df.format(a) +          "," + df.format((a/ arr.length) * 100L) + "%\n" +
+                            "Negative," + df.format(b) +          "," + df.format((b/ arr.length) * 100L) + "%\n" +
+                            "Total,"    + df.format(arr.length) + "," + df.format(100) + "%\n"
+            );
+
+        } catch (IOException e) {
+            System.out.println("Something went wrong: " + e.getMessage());
+        }
+
     }
 
     public static void main(String[] args) {

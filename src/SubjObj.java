@@ -77,13 +77,10 @@ public class SubjObj {
 
             x.setR(rn.nextBoolean());
 
-            if ((x.isR())) {
-                x.setAttrib('a');
+            if ((x.isR()))
                 a++;
-            } else {
-                x.setAttrib('b');
+            else
                 b++;
-            }
         }
 
         // writing csv file

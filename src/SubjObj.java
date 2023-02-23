@@ -8,6 +8,7 @@ public class SubjObj {
 
         try {
 
+            // getting input from the user
             System.out.println("Enter the number of animals: ");
             int size = scObj.nextInt();
             System.out.println("Generating " + size + " animals...");

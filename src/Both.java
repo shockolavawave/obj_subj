@@ -1,8 +1,8 @@
 public class Both {
 
-    private boolean O;
-    private boolean S;
-    private char attrib;
+    private boolean O;          // control for Objective attraction
+    private boolean S;          // control for Subjective attraction
+    private char attrib;        // takes value {a, b, c, d} based on both O and S
 
     public boolean isO() {  return O;   }
     public void setO(boolean o) {   O = o;  }

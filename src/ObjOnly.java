@@ -1,7 +1,7 @@
 public class ObjOnly {
 
-    private boolean R;
-    private char attrib;
+    private boolean R;      // either objective or subjective attraction
+    private char attrib;    // will take either of {a, b}
 
     public boolean isR() {  return R;   }
     public void setR(boolean r) {   R = r;  }

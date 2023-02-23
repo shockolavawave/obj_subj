@@ -2,6 +2,14 @@ import java.util.Scanner;
 
 public class SubjObj {
 
+    // function for Both
+    public static void countAndWrite(Both[] arr) {
+    }
+
+    // function for ObjOnly
+    public static void countAndWrite(ObjOnly[] arr) {
+    }
+
     public static Scanner scObj = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -12,6 +20,10 @@ public class SubjObj {
             System.out.println("Enter the number of animals: ");
             int size = scObj.nextInt();
             System.out.println("Generating " + size + " animals...");
+
+            countAndWrite(new Both[size]);
+            countAndWrite(new ObjOnly[size]);
+
 
         } catch (OutOfMemoryError e) {
             System.out.println("Memory not enough.\nAborting program.");

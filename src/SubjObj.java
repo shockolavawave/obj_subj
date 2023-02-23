@@ -107,9 +107,12 @@ public class SubjObj {
         try {
 
             // getting input from the user
-            System.out.println("Enter the number of animals: ");
+            System.out.print("Enter the number of animals: ");
             int size = scObj.nextInt();
             System.out.println("Generating " + size + " animals...");
+
+            if (size < 50)
+                throw new RuntimeException("Size must be >= 50.");
 
             countAndWrite(new Both[size]);
             countAndWrite(new ObjOnly[size]);
@@ -120,6 +123,9 @@ public class SubjObj {
             System.exit(0);
         } catch (NumberFormatException e) {
             System.out.println("Invalid input!\nAborting program.");
+            System.exit(0);
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
             System.exit(0);
         }
 

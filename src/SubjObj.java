@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class SubjObj {
 
+    public static Scanner scObj = new Scanner(System.in);
+    public static Random rn = new Random();
+
     // function for Both
     public static void countAndWrite(Both[] arr) {
     }
@@ -9,8 +12,6 @@ public class SubjObj {
     // function for ObjOnly
     public static void countAndWrite(ObjOnly[] arr) {
     }
-
-    public static Scanner scObj = new Scanner(System.in);
 
     public static void main(String[] args) {
 

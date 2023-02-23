@@ -50,7 +50,7 @@ public class SubjObj {
         try (FileWriter fw = new FileWriter("files/" + arr.length + "_Both.csv")) {
 
             fw.write(
-                    "Selection, Consideration, Counts, Percentege\n" +
+                    "Selection, Consideration, Counts, Percentage\n" +
                             "Positive, Subjective and Objective," + df.format(a) + "," + df.format((a/ arr.length) * 100L) + "%\n" +
                             "Positive, Only Objective,"           + df.format(b) + "," + df.format((b/ arr.length) * 100L) + "%\n" +
                             "Positive, Only Subjective,"          + df.format(c) + "," + df.format((c/ arr.length) * 100L) + "%\n" +
@@ -90,7 +90,7 @@ public class SubjObj {
         try (FileWriter fw = new FileWriter("files/" + arr.length + "_ObjOnly.csv")) {
 
             fw.write(
-                    "Selection, Counts, Percentege\n" +
+                    "Selection, Counts, Percentage\n" +
                             "Positive," + df.format(a) +          "," + df.format((a/ arr.length) * 100L) + "%\n" +
                             "Negative," + df.format(b) +          "," + df.format((b/ arr.length) * 100L) + "%\n" +
                             "Total,"    + df.format(arr.length) + "," + df.format(100) + "%\n"

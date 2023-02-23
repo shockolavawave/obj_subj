@@ -1,9 +1,14 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.DecimalFormat;
+import java.util.Random;
 import java.util.Scanner;
 
 public class SubjObj {
 
     public static Scanner scObj = new Scanner(System.in);
     public static Random rn = new Random();
+    public static DecimalFormat df = new DecimalFormat("000.##");
 
     // function for Both
     public static void countAndWrite(Both[] arr) {

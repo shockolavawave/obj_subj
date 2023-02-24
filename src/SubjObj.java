@@ -3,6 +3,7 @@ import org.jetbrains.annotations.NotNull;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -16,25 +17,22 @@ public class SubjObj {
     public static void countAndWrite(Both @NotNull [] arr) {
 
         // allocating random boolean to O and S
-        for (Both x :
-                arr) {
+        Arrays.stream(arr).forEachOrdered(x -> {
             x.setO(rn.nextBoolean());
             x.setS(rn.nextBoolean());
-        }
+        });
 
         // calculating and assigning attrib
-        for (Both x:
-             arr) {
-
-            if ( (x.isO()) && (x.isS()) )
+        Arrays.stream(arr).forEachOrdered(x -> {
+            if ((x.isO()) && (x.isS()))
                 x.setAttrib('a');
-            else if ( (x.isO()) && !(x.isS()) )
+            else if ((x.isO()) && !(x.isS()))
                 x.setAttrib('b');
-            else if ( !(x.isO()) && (x.isS()) )
+            else if (!(x.isO()) && (x.isS()))
                 x.setAttrib('c');
-            else if ( !(x.isO()) && !(x.isS()) )
+            else if (!(x.isO()) && !(x.isS()))
                 x.setAttrib('d');
-        }
+        });
 
         // counting attrib
         int a = 0, b = 0, c = 0, d = 0;

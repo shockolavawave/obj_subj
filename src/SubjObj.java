@@ -51,10 +51,10 @@ public class SubjObj {
 
             fw.write(
                     "Selection, Consideration, Counts, Percentage\n" +
-                            "Positive, Subjective and Objective," + df.format(a) + "," + df.format((a/ arr.length) * 100L) + "%\n" +
-                            "Positive, Only Objective,"           + df.format(b) + "," + df.format((b/ arr.length) * 100L) + "%\n" +
-                            "Positive, Only Subjective,"          + df.format(c) + "," + df.format((c/ arr.length) * 100L) + "%\n" +
-                            "Negative, disqualified,"             + df.format(d) + "," + df.format((d/ arr.length) * 100L) + "%\n" +
+                            "Positive, Subjective and Objective," + df.format(a) + "," + df.format(((float)a/ arr.length) * 100L) + "%\n" +
+                            "Positive, Only Objective,"           + df.format(b) + "," + df.format(((float)b/ arr.length) * 100L) + "%\n" +
+                            "Positive, Only Subjective,"          + df.format(c) + "," + df.format(((float)c/ arr.length) * 100L) + "%\n" +
+                            "Negative, disqualified,"             + df.format(d) + "," + df.format(((float)d/ arr.length) * 100L) + "%\n" +
                             "-, Total,"                           + df.format(arr.length) + "," + df.format(100) + "%\n"
             );
 
@@ -88,8 +88,8 @@ public class SubjObj {
 
             fw.write(
                     "Selection, Counts, Percentage\n" +
-                            "Positive," + df.format(a) +          "," + df.format((a/ arr.length) * 100L) + "%\n" +
-                            "Negative," + df.format(b) +          "," + df.format((b/ arr.length) * 100L) + "%\n" +
+                            "Positive," + df.format(a) +          "," + df.format(((float)a/ arr.length) * 100L) + "%\n" +
+                            "Negative," + df.format(b) +          "," + df.format(((float)b/ arr.length) * 100L) + "%\n" +
                             "Total,"    + df.format(arr.length) + "," + df.format(100) + "%\n"
             );
 

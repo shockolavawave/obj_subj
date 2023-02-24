@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.NotNull;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
@@ -11,7 +13,7 @@ public class SubjObj {
     public static DecimalFormat df = new DecimalFormat("000.##");
 
     // function for Both
-    public static void countAndWrite(Both[] arr) {
+    public static void countAndWrite(Both @NotNull [] arr) {
 
         // allocating random boolean to O and S
         for (Both x :
@@ -65,7 +67,7 @@ public class SubjObj {
     }
 
     // function for ObjOnly
-    public static void countAndWrite(ObjOnly[] arr) {
+    public static void countAndWrite(ObjOnly @NotNull [] arr) {
 
         /*  ---     assigning random boolean to R
         *           assigning respective attrib
@@ -111,8 +113,18 @@ public class SubjObj {
             if (size < 50)
                 throw new RuntimeException("Size must be >= 50.");
 
-            countAndWrite(new Both[size]);
-            countAndWrite(new ObjOnly[size]);
+            // creating object arrays
+            Both[] arr1 = new Both[size];
+            ObjOnly[] arr2 = new ObjOnly[size]; 
+            
+            // initialising objects
+            for (int i = 0; i < size; i++) {
+                arr1[i] = new Both();
+                arr2[i] = new ObjOnly();
+            }
+            
+            countAndWrite(arr1);
+            countAndWrite(arr2);
 
 
         } catch (OutOfMemoryError e) {
